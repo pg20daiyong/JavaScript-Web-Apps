@@ -24,11 +24,11 @@ export default class App{
         })
         let requestData = JSON.stringify( bodyData );
         // send data to the server....
-        $.post("/api", requestData, this.handleServerResponse )
+        $.post("http://127.0.0.1:3000/api", requestData, this.handleServerResponse )
         // OK
-        $.post("/api", bodyData, this.handleServerResponse )
+        $.post("http://127.0.0.1:3000/api", bodyData, this.handleServerResponse )
         // OK
-        $.post("/api", params, this.handleServerResponse )
+        $.post("http://127.0.0.1:3000/api", params, this.handleServerResponse )
     }
 
     handleServerResponse( data ) {}

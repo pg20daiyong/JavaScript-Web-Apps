@@ -22,12 +22,24 @@ class Server{
             let assert = true;
             let params = request.param;
             let query = request.query;
-            let data = request.data;            
+            let data = request.data;   
+            //let body = body;
+            
+            console.log(body["favTakeOut"]);
+            console.log(body["favBeverage"]);
+            console.log(body["favTakeOut"]);
 
+
+            console.log(params)
+            console.log(query)
+            console.log(data)
             // do something
+            // let food = data['favFood'];
+            // let bev = data['favBeverage'];
+            // let takeOut = data['favTakeOut'];
             let food = data['fav-food'];
-            let bev = data['fav-beverage'];
-            let takeOut = data['fav-food'];
+             let bev = data['fav-beverage'];
+             let takeOut = data['fav-take-out'];
             // respond
         });
         
