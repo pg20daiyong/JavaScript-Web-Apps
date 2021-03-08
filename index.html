@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2021 Daiyong Kim -->
+<html>
+    <head>
+        <title>Form Demo</title>        
+        <link rel="stylesheet" type="text/css" href="css/style_base.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- script here are external libs -->
+        <!-- <script src="https://ajax.googoeapis.com/ajax/libs/jquery/3.5.1/jquery.3.5.1.js"></script>         -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Forms Demo Client</h1>
+        </header>
+        <main>
+            <section id="test-form">
+                <form id="fav-form" class="submission-form" accept-charset="utf-8">
+                <input type="text" name="favTakeOut" value="" />
+                <input type="text" name="favFood" value="" />
+                <select name="favBeverage">
+                    <option value="coke">Coca Cola</option>
+                    <option value="pepsi">Pepsi</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="tea">Tea</option>
+                    <option value="water">Water</option>
+                </select>
+                <input type="submit" name="action" value="Submit" />
+            </form>
+            </section>
+            <section id="output-area">
+                <div id="output-field" class="box-it-op"></div>
+                <!-- fill in dynamically -->
+            </section>
+        </main>
+        <footer>                        
+            Copyright (c) 2021 Daiyong Kim
+        </footer>
+        <script type="module" src="./index.js"></script>
+    </body>
+</html>
