@@ -78,7 +78,7 @@ export default class Editor {
         // get form data as JS object
         let request = this._createLevel(event);
 
-        console.log("request" + request);
+       // console.log("request" + request);
 
         // send data to the server....
         $.post("/api/save", request)
@@ -322,7 +322,7 @@ export default class Editor {
             })
             .on('dragstart',event=>{
                 
-                console.log("DragStart");
+                //console.log("DragStart");
 
                 this.$dragTarget = $(event.target);
                 let height = this.$dragTarget.css("height");
@@ -352,7 +352,7 @@ export default class Editor {
                 //let z = event.target.style.zIndex;
 
                 //what todo with zIndex?
-                console.log(z);
+                //console.log(z);
             })
             .on('mouseout',event=>{
                 //change cursor back
@@ -404,15 +404,22 @@ export default class Editor {
         // get form data as JS object
         let request = $(event.target).serializeArray();
         console.log(request);
+        console.log(request[0].value);
+
+        
 
         let bodyData = {
             type:'object',
+            texture : "./images/" + request[0].value + ".png"
         };
 
         request.forEach(element => {
             bodyData[element.name] = element.value;
         })
-        $.post("/api/save_obj", bodyData, this.handleServerResponse)
+
+       // bodyData += {name : "texture", value : "./data/objects/" + bodyData[name] + ".png"}
+       
+        $.post("/api/save_object", bodyData, this.handleServerResponse)
     };
 
     

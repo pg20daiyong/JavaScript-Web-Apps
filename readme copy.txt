@@ -65,5 +65,4 @@ Browse to demo link
 7. right icon bar is object, you can drag and drop 
     - fileupload does not work
     - just in the name value --> [white-bird, yellow-bird, balck-bird] are only available
-    - after done, you have to refresh current page
 8  right right side is save the object file to server. 

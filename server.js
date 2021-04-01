@@ -143,7 +143,7 @@ class Server {
             if (data.requestData[type]=='level')
                 dirName += '/levels';
             
-                console.log(dirName);
+                //console.log(dirName);
             let result = {
                 payload:[]
             }  
@@ -176,7 +176,7 @@ class Server {
             let data = request.body;
             let reply = new Reply(1, "Don't use data");
             
-            console.log(data);
+            //console.log(data);
 
             // this._checkUserId(data.userid);
             // if(userIdExists != true){
@@ -200,7 +200,7 @@ class Server {
             // if (data.requestData[type]=='level')
             //     dirName += '/levels';
             
-                console.log(dirName);
+                //console.log(dirName);
             let result = {
                 payload:[]
             }  
@@ -238,7 +238,7 @@ class Server {
             
             let reply = new Reply(1, "Don't use data");
             
-            console.log(data)
+            //console.log(data)
             // this._checkUserId(data.userid);
             // if(userIdExists != true){
             //     reply.error(2, "User does not exist");
@@ -261,7 +261,72 @@ class Server {
             var fileAddress = `${folder}${levelName}.json`;
             fsExtra.writeJson(fileAddress, data, err => {
                 if (err) return console.error(err)
-                console.log('success!')
+            });
+
+            //add data to the game object list
+            let result = {
+                error: 0,
+            }
+            response.send(JSON.stringify(result));
+
+            // this._checkUserId(data.userid);
+            // if(userIdExists != true){
+            //     reply.error(2, "User does not exist");
+            //     response.send(reply.serialize());
+            //     return;
+            // }
+
+
+            // Success Response
+            // {
+            //     "name": "requested entity name",
+            //     "bytes": "actual bytes written",
+            //     "error": 0
+            // }   
+            // Error Response
+            // Condition: If 'userid' does not exist or file could not be written to the server.
+            // {
+            //     "error": 1+ // Greater than zero on error
+            // }    
+        });
+
+        this.api.post('/api/save_object', (request, response) => {
+            // Request params
+            // {
+            //     "userid": "valid vfs username", // eg pg15student
+            //     "name": "filename", // name of entity, no spaces, no extension
+            //     "type": "object" | "level", // one of these two key strings
+            //     "payload": "JSONString" // actual data in JSON format 
+            // } 
+
+            let data = request.body;
+            //let data = JSON.parse(JSON.stringify(request.body));
+            
+            let reply = new Reply(1, "Don't use data");
+            
+            //console.log(data)
+            // this._checkUserId(data.userid);
+            // if(userIdExists != true){
+            //     reply.error(2, "User does not exist");
+            //     response.send(reply.serialize());
+            //     return;
+            // }
+
+            let levelName = data.name
+           
+            if (!levelName) {
+                reply.error(2, "Level name does not exist");
+                response.send(reply.serialize());
+                return;
+            }
+
+            let isNewFile = true;
+            let folder="./data/objects/";
+
+         
+            var fileAddress = `${folder}${levelName}.json`;
+            fsExtra.writeJson(fileAddress, data, err => {
+                if (err) return console.error(err)
             })
 
             //add data to the game object list

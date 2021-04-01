@@ -1,8 +1,1 @@
-{
-    "name":"level-1",
-    "obstacles":"10",
-    "cannons":"1",
-    "shots":"15",
-    "type":"level",
-    "objects":"{\"object\":[{\"id\":0,\"left\":\"794px\",\"top\":\"435px\",\"height\":\"40px\",\"width\":\"40px\",\"objectShape\":\"0px\",\"backgroundImage\":\"url(../images/bird.png)\"},{\"id\":1,\"left\":\"975px\",\"top\":\"415px\",\"height\":\"40px\",\"width\":\"40px\",\"objectShape\":\"0px\",\"backgroundImage\":\"url(../images/bird.png)\"},{\"id\":2,\"left\":\"660px\",\"top\":\"304px\",\"height\":\"50px\",\"width\":\"50px\",\"objectShape\":\"50%\",\"backgroundImage\":\"url(../images/bird.png)\"}]}"
-    }
+{"name":"level-1","obstacles":"10","cannons":"5","shots":"15","type":"level","objects":"{\"object\":[{\"id\":0,\"left\":\"auto\",\"top\":\"auto\",\"height\":\"50px\",\"width\":\"50px\",\"objectShape\":\"0px\",\"backgroundImage\":\"url(\\\"/editor\\\")\"},{\"id\":1,\"left\":\"auto\",\"top\":\"auto\",\"height\":\"50px\",\"width\":\"50px\",\"objectShape\":\"0px\",\"backgroundImage\":\"url(\\\"/editor\\\")\"},{\"id\":2,\"left\":\"1149px\",\"top\":\"313px\",\"height\":\"50px\",\"width\":\"50px\",\"objectShape\":\"0px\",\"backgroundImage\":\"url(\\\"/images/bird.png\\\")\",\"objName\":\"bird\"},{\"id\":3,\"left\":\"1142px\",\"top\":\"536px\",\"height\":\"50px\",\"width\":\"50px\",\"objectShape\":\"0px\",\"backgroundImage\":\"url(\\\"/images/canon.png\\\")\",\"objName\":\"block\"},{\"id\":4,\"left\":\"904px\",\"top\":\"419px\",\"height\":\"50px\",\"width\":\"50px\",\"objectShape\":\"0px\",\"backgroundImage\":\"url(\\\"/images/pig.png\\\")\",\"objName\":\"pig\"},{\"id\":5,\"left\":\"691px\",\"top\":\"190px\",\"height\":\"50px\",\"width\":\"50px\",\"objectShape\":\"0px\",\"backgroundImage\":\"url(\\\"/images/white-bird.png\\\")\",\"objName\":\"white-bird\"}]}"}
