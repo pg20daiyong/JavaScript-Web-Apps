@@ -3,11 +3,14 @@
 
 export default class App{
     constructor(){
-        // set up fields to hold date
+        // set up fields to hold data
 
         // set up event handler for form submit
         $("#fav-form").on('submit', event => this.handleSubmitForm( event ));
+        
     }
+
+    
 
     handleSubmitForm(event){
         event.preventDefault();
@@ -24,11 +27,11 @@ export default class App{
         })
         let requestData = JSON.stringify( bodyData );
         // send data to the server....
-        $.post("http://127.0.0.1:3000/api", requestData, this.handleServerResponse )
+        $.post("/api", requestData, this.handleServerResponse )
         // OK
-        $.post("http://127.0.0.1:3000/api", bodyData, this.handleServerResponse )
+        $.post("/api", bodyData, this.handleServerResponse )
         // OK
-        $.post("http://127.0.0.1:3000/api", params, this.handleServerResponse )
+        $.post("/api", params, this.handleServerResponse )
     }
 
     handleServerResponse( data ) {}

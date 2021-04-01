@@ -1,0 +1,41 @@
+/* copyright (c) 2021 Daiyong Kim */
+.main-section{
+    display: flex;
+    min-width: 800px;   
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar{
+    max-width: 200px;
+    height: 720px;  
+    padding-top: 30px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    flex-grow: 1;
+    background-color: gray;    
+}
+
+.right-sidebar{
+    max-width: 200px;
+    height: 720px;
+    padding-top: 30px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    flex-grow: 1;
+    background-color: darkgray;    
+}
+
+.mid-game{ 
+    height: 720px;
+    width: 1280px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-image: url("../images/background.png");
+}
+
+

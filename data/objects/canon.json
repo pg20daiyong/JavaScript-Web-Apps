@@ -1,0 +1,11 @@
+{
+	"type":"object",
+	"name":"block",
+	"height":"50",
+	"width":"50",
+	"shape":"square",
+	"texture":"./images/canon.png",
+	"friction":"10",
+	"mass":"90",
+	"restitution":"0"
+}

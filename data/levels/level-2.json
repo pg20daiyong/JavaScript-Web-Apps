@@ -1,0 +1,9 @@
+{
+
+    "name":"level-2",
+    "obstacles":"10",
+    "cannons":"1",
+    "shots":"15",
+    "type":"level",
+    "objects":"{\"object\":[{\"id\":0,\"left\":\"794px\",\"top\":\"435px\",\"height\":\"40px\",\"width\":\"40px\",\"objectShape\":\"0px\",\"backgroundImage\":\"url(../images/bird.png)\"},{\"id\":1,\"left\":\"975px\",\"top\":\"415px\",\"height\":\"40px\",\"width\":\"40px\",\"objectShape\":\"0px\",\"backgroundImage\":\"url(../images/canon.png)\"},{\"id\":2,\"left\":\"660px\",\"top\":\"304px\",\"height\":\"50px\",\"width\":\"50px\",\"objectShape\":\"50%\",\"backgroundImage\":\"url(../images/pig.png)\"}]}"
+    }
